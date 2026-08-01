@@ -2,7 +2,7 @@
 
 Administrador de encuestas de SM Soluciones.
 
-- Producción: https://smsurvey-sm-soluciones.vercel.app
+- Producción: https://smsolcuiones-survey.vercel.app
 - Código: https://github.com/pakostudio/SURVEY-SM
 
 ## Funciones
