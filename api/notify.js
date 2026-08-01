@@ -10,7 +10,7 @@ export default async function handler(request, response) {
   if (request.method !== 'POST') return response.status(405).json({ error: 'Method not allowed' });
 
   const origin = request.headers.origin || '';
-  if (!/^https:\/\/(smsolcuiones-survey|survey-smsoluciones-[a-z0-9-]+)\.vercel\.app$/.test(origin)) {
+  if (!/^https:\/\/(smsoluciones-survey|smsolcuiones-survey|survey-smsoluciones-[a-z0-9-]+)\.vercel\.app$/.test(origin)) {
     return response.status(403).json({ error: 'Origin not allowed' });
   }
 
@@ -37,7 +37,7 @@ export default async function handler(request, response) {
       from: 'SMSURVEY <notificaciones@sportcstudio.com>',
       to: ['pako@smsoluciones-group.com.mx'],
       subject: `Nueva respuesta: ${survey}`,
-      html: `<h2>Nueva respuesta en SMSURVEY</h2><p><strong>Encuesta:</strong> ${escapeHtml(survey)}</p><p><strong>Nombre:</strong> ${escapeHtml(name)}</p><p><strong>Área:</strong> ${escapeHtml(area)}</p><p><a href="https://smsolcuiones-survey.vercel.app/#admin">Ver respuestas en el panel</a></p>`
+      html: `<h2>Nueva respuesta en SMSURVEY</h2><p><strong>Encuesta:</strong> ${escapeHtml(survey)}</p><p><strong>Nombre:</strong> ${escapeHtml(name)}</p><p><strong>Área:</strong> ${escapeHtml(area)}</p><p><a href="https://smsoluciones-survey.vercel.app/#admin">Ver respuestas en el panel</a></p>`
     })
   });
 
